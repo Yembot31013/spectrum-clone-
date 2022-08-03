@@ -185,7 +185,7 @@
         </div>
         <br>
         <a href="#">Create a Username</a>
-         <form action="">
+         <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 
            <div class="form-group">
              <label for="username"> Username <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
@@ -199,7 +199,7 @@
                     </div>
              <input type="checkbox" name="username " id="username" value="demo"><span>Remember Username</span> 
            </div>
-           
+           <div data-netlify-recaptcha="true"></div>
            <button type="submit" class="btn">Sign In</button>
          </form>
 
